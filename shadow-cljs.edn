@@ -1,0 +1,8 @@
+{:lein {:profile "+cljs"}
+
+ :builds {:app {:target      :node-library
+                :output-to   "target/main.js"
+                :exports-var my.app/-main}}
+
+ :nrepl  {:port       50000
+          :middleware [cider.piggieback/wrap-cljs-repl]}}
